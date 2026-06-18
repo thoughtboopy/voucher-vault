@@ -115,7 +115,7 @@ export default function VouchersPage() {
           </div>
         </motion.div>
 
-        {/* First 6 Cards - 3 column grid */}
+        {/* First 6 Cards - 3 column grid (desktop), 1 column (mobile) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -134,25 +134,23 @@ export default function VouchersPage() {
           ))}
         </motion.div>
 
-        {/* Last 2 Cards - centered */}
+        {/* Last 2 Cards - centered on lg, stacked on mobile */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-2xl mx-auto mt-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:max-w-2xl lg:mx-auto mt-8"
         >
-          <div className="flex justify-center gap-8">
-            {vouchers.slice(6).map((voucher: Voucher) => (
-              <motion.div key={voucher.id} variants={itemVariants} className="w-full max-w-md">
-                <FlipCard 
-                  voucher={voucher}
-                  onRequestRedeem={requestRedeem}
-                  onUndoRedeem={undoRedeem}
-                  onConfirmRedeem={confirmRedeem}
-                />
-              </motion.div>
-            ))}
-          </div>
+          {vouchers.slice(6).map((voucher: Voucher) => (
+            <motion.div key={voucher.id} variants={itemVariants} className="max-w-md mx-auto lg:mx-0">
+              <FlipCard 
+                voucher={voucher}
+                onRequestRedeem={requestRedeem}
+                onUndoRedeem={undoRedeem}
+                onConfirmRedeem={confirmRedeem}
+              />
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Footer Message */}
