@@ -134,15 +134,15 @@ export default function VouchersPage() {
           ))}
         </motion.div>
 
-        {/* Last 2 Cards - centered on lg, stacked on mobile */}
+        {/* Last 2 Cards - centered on desktop, stacked on mobile */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:max-w-2xl lg:mx-auto mt-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:max-w-4xl mx-auto mt-8"
         >
           {vouchers.slice(6).map((voucher: Voucher) => (
-            <motion.div key={voucher.id} variants={itemVariants} className="max-w-md mx-auto lg:mx-0">
+            <motion.div key={voucher.id} variants={itemVariants}>
               <FlipCard 
                 voucher={voucher}
                 onRequestRedeem={requestRedeem}
