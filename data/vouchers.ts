@@ -54,7 +54,7 @@ export const vouchers: Voucher[] = [
     remainingQuantity: 1,
     status: 'available',
     validUntil: '2027-06-16',
-    icon: 'plane',
+    icon: 'chain',
     color: '#A8B89C'
   },
   {
@@ -73,7 +73,7 @@ export const vouchers: Voucher[] = [
     remainingQuantity: 2,
     status: 'available',
     validUntil: '2027-06-16',
-    icon: 'heart',
+    icon: 'fire',
     color: '#C9A9A6'
   },
   {
@@ -91,7 +91,7 @@ export const vouchers: Voucher[] = [
     remainingQuantity: 1,
     status: 'available',
     validUntil: '2027-06-16',
-    icon: 'plane',
+    icon: 'highheel',
     color: '#7D8471'
   },
   {
@@ -129,7 +129,7 @@ export const vouchers: Voucher[] = [
     remainingQuantity: 2,
     status: 'available',
     validUntil: '2027-06-16',
-    icon: 'sparkles',
+    icon: 'mouth',
     color: '#8B7355'
   },
   {
@@ -148,7 +148,7 @@ export const vouchers: Voucher[] = [
     remainingQuantity: 1,
     status: 'available',
     validUntil: '2027-06-16',
-    icon: 'sparkles',
+    icon: 'gift',
     color: '#D4AF37'
   }
 ]
