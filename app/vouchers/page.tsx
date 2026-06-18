@@ -105,9 +105,14 @@ export default function VouchersPage() {
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-4">
             Happy Birthday, Praewa
           </h2>
-          <p className="font-sans text-charcoal-light max-w-lg mx-auto text-xs sm:text-sm md:text-base">
-            Tap to reveal. Redeem if you dare. No returns, no exchanges, no refunds.
-          </p>
+          <div className="space-y-1">
+            <p className="font-sans text-charcoal-light text-xs sm:text-sm md:text-base">
+              Tap to reveal. Redeem if you dare.
+            </p>
+            <p className="font-sans text-charcoal-light text-xs sm:text-sm md:text-base">
+              No returns, no exchanges, no refunds.
+            </p>
+          </div>
         </motion.div>
 
         {/* Voucher Grid */}
