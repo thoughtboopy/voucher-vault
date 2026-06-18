@@ -139,18 +139,20 @@ export default function VouchersPage() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex justify-center gap-8 mt-8"
+          className="max-w-2xl mx-auto mt-8"
         >
-          {vouchers.slice(6).map((voucher: Voucher) => (
-            <motion.div key={voucher.id} variants={itemVariants}>
-              <FlipCard 
-                voucher={voucher}
-                onRequestRedeem={requestRedeem}
-                onUndoRedeem={undoRedeem}
-                onConfirmRedeem={confirmRedeem}
-              />
-            </motion.div>
-          ))}
+          <div className="flex justify-center gap-8">
+            {vouchers.slice(6).map((voucher: Voucher) => (
+              <motion.div key={voucher.id} variants={itemVariants} className="w-full max-w-md">
+                <FlipCard 
+                  voucher={voucher}
+                  onRequestRedeem={requestRedeem}
+                  onUndoRedeem={undoRedeem}
+                  onConfirmRedeem={confirmRedeem}
+                />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Footer Message */}
